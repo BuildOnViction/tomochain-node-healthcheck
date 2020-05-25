@@ -23,6 +23,7 @@
   "homepage": "https://github.com/thanhnguyennguyen/tomochain-node-healthcheck#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "net": "^1.0.2",
     "noti_bot": "^1.0.1",
     "web3": "^1.0.0-beta.26"
   }
