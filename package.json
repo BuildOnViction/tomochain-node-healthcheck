@@ -1,0 +1,29 @@
+{
+  "name": "tomochain-node-healthcheck",
+  "version": "1.0.0",
+  "description": "check if tomochain node is slow comparing to public rpc of tomochain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhnguyennguyen/tomochain-node-healthcheck.git"
+  },
+  "keywords": [
+    "tomochain",
+    "node",
+    "healthcheck"
+  ],
+  "author": "NguyenNguyen (nguyenbk92@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thanhnguyennguyen/tomochain-node-healthcheck/issues"
+  },
+  "homepage": "https://github.com/thanhnguyennguyen/tomochain-node-healthcheck#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "noti_bot": "^1.0.1",
+    "web3": "^1.0.0-beta.26"
+  }
+}
