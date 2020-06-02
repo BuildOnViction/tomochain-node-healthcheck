@@ -1,6 +1,7 @@
 # tomochain-node-healthcheck
 check if tomochain node is slow 
 ### Install
+Required: NodeJS 10
 ```
 npm i
 ```
@@ -18,4 +19,4 @@ node index.js
 
 - Example alert:
 
-![image](https://user-images.githubusercontent.com/17243442/82778429-99fecc80-9e7b-11ea-878d-e6ba5617f589.png)
+![image](https://user-images.githubusercontent.com/17243442/83495687-3d865780-a4e2-11ea-9d51-a194ad85a953.png)
