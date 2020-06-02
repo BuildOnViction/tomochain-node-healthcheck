@@ -23,7 +23,7 @@ const main = async () => {
         localWeb3 = new Web3(new Web3.providers.IpcProvider(process.env.LOCAL_IPC_PATH, net))
         localLatestBlockNumber = await localWeb3.eth.getBlockNumber()
     } catch (err) {
-        let msg = "Your node seems to be down"
+        let msg = "Your node seems to be down. Your ipcPath: " + process.env.LOCAL_IPC_PATH
         console.log(msg)
         console.log(err)
         notifyTelegram(msg, process.env.TELEGRAM_TOKEN, process.env.TELEGRAM_CHAT)
@@ -32,7 +32,7 @@ const main = async () => {
     }
     if (localLatestBlockNumber < latestBlockNumber - THRESHOLD) {
         let coinbase = await localWeb3.eth.getCoinbase()
-        let msg = "This node coinbase = " + coinbase + " is slow. RPCCurrentBlock=" + latestBlockNumber + " YourCurrentBlock=" + localLatestBlockNumber
+        let msg = "This node coinbase: " + coinbase + " is slow. RPCCurrentBlock=" + latestBlockNumber + " YourCurrentBlock=" + localLatestBlockNumber
         notifyTelegram(msg, process.env.TELEGRAM_TOKEN, process.env.TELEGRAM_CHAT)
         notifySlack(msg, process.env.SLACK_HOOK_KEY, process.env.SLACK_CHANNEL, process.env.SLACK_BOTNAME, process.env.SLACK_ICON)
         console.log(msg)
