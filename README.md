@@ -1,5 +1,5 @@
 # tomochain-node-healthcheck
-check if nodes is slow 
+check if tomochain node is slow 
 ### Install
 ```
 npm i
