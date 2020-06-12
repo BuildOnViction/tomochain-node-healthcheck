@@ -12,7 +12,7 @@ npm i
 cp .env.sample .env
 # edit .env
 ```
-- setup cronjob to run this command
+- setup cronjob to run this command on the server which is running masternode/fullnode
 ```
 node index.js
 ```
