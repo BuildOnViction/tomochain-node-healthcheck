@@ -17,6 +17,9 @@ const main = async () => {
     } catch (err) {
         console.log("Unable to connect public rpc at ", process.env.RPC_ENDPOINT)
         console.log(err)
+        let msg = "Cannot connect public rpc " + process.env.RPC_ENDPOINT
+        notifyTelegram(msg, process.env.TELEGRAM_TOKEN, process.env.TELEGRAM_CHAT)
+        notifySlack(msg, process.env.SLACK_HOOK_KEY, process.env.SLACK_CHANNEL, process.env.SLACK_BOTNAME, process.env.SLACK_ICON)
         process.exit(1)
     }
     try {
@@ -42,3 +45,4 @@ const main = async () => {
     process.exit(0)
 }
 main()
+
